@@ -1,0 +1,46 @@
+# Virtual environments
+.venv/
+.venv-wsl/
+venv/
+env/
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Environment variables, secrets, and credentials
+.env
+.env.*
+*.pem
+*.key
+secrets.*
+credentials.*
+
+# Downloaded / cached embedding models (>100 MB ONNX weights & HF cache)
+# Automatically downloaded by topics.py on first analysis
+models/topic_embeddings/
+
+# Private WhatsApp chat exports and user data
+# Keep the synthetic test fixture and public TweetEval dataset
+*WhatsApp*.txt
+*_chat.txt
+chat_*.txt
+private_chats/
+exports/
+!tests/fixtures/sample_group_chat.txt
+!data/raw/tweet_eval/**
+
+# Temporary / scratch / OS / IDE files
+work/*
+*.tmp
+*.temp
+*.bak
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
